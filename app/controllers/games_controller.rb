@@ -33,7 +33,7 @@ class GamesController < ApplicationController
     url = "https://wagon-dictionary.herokuapp.com/#{attempt}"
     if json_analysis(url)["found"]
       if attempt.upcase.split(//).all? { |x| grid.delete_at(grid.index(x)) if grid.include?(x) }
-        { message: "well done", score: attempt.length * 10 - (end_time - start_time), time: end_time - start_time }
+        { message: "well done", score: attempt.length * 20 - (end_time - start_time), time: end_time - start_time }
       else
         { message: "not in the grid", score: 0, time: Time.now - start_time }
       end
