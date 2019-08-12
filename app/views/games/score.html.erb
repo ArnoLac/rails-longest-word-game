@@ -1,0 +1,8 @@
+<h1>Your Score !</h1>
+
+<p> <%= "Your word: #{@word}" %> </p>
+<p> <%= "Time Taken to answer: #{@result[:time]} secondes" %> </p>
+<p> <%= "Your score: #{@result[:score]}" %> </p>
+<p> <%= "Message: #{@result[:message]}" %> </p>
+
+<%= link_to 'Try again', new_path %>
